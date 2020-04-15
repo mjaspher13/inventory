@@ -9,7 +9,6 @@ var itemsRouter = require('./routes/items');
 
 var app = express();
 
-var debug = require('debug')('express-sequelize');
 var http = require('http');
 var models = require('./models');
 
