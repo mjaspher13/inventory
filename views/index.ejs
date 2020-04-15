@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory Items</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Inventory Items</h1>
     <%- include('items/form'); %>
-    <%- include('items/table'); %>
+    <div class="container">
+      <div class="table-container">
+        <h1 class="header-title">Inventory Items</h1>
+        <%- include('items/table'); %>
+      </div>
+    </div>
   </body>
+  <footer>
+    Copyright &copy; &ensp;| &ensp; 2020 Powered by Express &ensp;|&ensp;
+    Github: &nbsp;
+    <a href="https://github.com/mjaspher13/inventory"> mjaspher13/inventory</a>
+  </footer>
+  <script src="./javascripts/form.js"></script>
+  <script src="./javascripts/table.js"></script>
 </html>
