@@ -195,6 +195,10 @@ input {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+td > input {
+  max-width: 120px;
+}
+
 .item-form {
   display: flex;
   position: fixed;

@@ -2,7 +2,7 @@ function loadTable() {
   var data = new FormData();
 
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://localhost:3000/items", true);
+  xhr.open("GET", appUrl + "items", true);
   xhr.onload = function () {
     let items = JSON.parse(this.responseText).items;
     if (items.length) {
@@ -152,7 +152,7 @@ function updateItem(data) {
   body.qty = row.querySelector(".item-qty").querySelector("input").value;
   body.amount = row.querySelector(".item-amount").querySelector("input").value;
   var xhr = new XMLHttpRequest();
-  xhr.open("PUT", "http://localhost:3000/items/" + id, true);
+  xhr.open("PUT", appUrl + "items/" + id, true);
   xhr.setRequestHeader("Content-Type", "Application/json");
   xhr.onload = function () {
     let item = JSON.parse(this.responseText).updatedItem;
@@ -164,7 +164,7 @@ function updateItem(data) {
 function deleteItem(id) {
   var data = new FormData();
   var xhr = new XMLHttpRequest();
-  xhr.open("DELETE", "http://localhost:3000/items/" + id, true);
+  xhr.open("DELETE", appUrl + "items/" + id, true);
   xhr.onload = function () {};
   xhr.send(data);
 }
